@@ -17,12 +17,13 @@ An interactive React application for calculating and visualizing all common tang
 - **`drawRef` Pattern:** High-performance resize handling without stale closures or redundant event listener re-binding.
 - **High-DPI Support:** Sharp rendering on Retina/4K displays via `window.devicePixelRatio`.
 
-````markdown
+
 ## Getting Started
 
 Run the project locally in three steps:
 
 1. **Clone the repository:**
+
    ```bash
    git clone [https://github.com/marek-kulhavy/circle-tangents.git](https://github.com/marek-kulhavy/circle-tangents.git)
    cd circle-tangents
@@ -38,3 +39,4 @@ Run the project locally in three steps:
    ```bash
    npm run dev
    ```
+

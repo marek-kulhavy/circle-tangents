@@ -1,33 +1,40 @@
 # Analytical Geometry: Circle Tangents Editor
 
-An interactive React application designed to calculate and visualize all common tangents between multiple circles.
+An interactive React application for calculating and visualizing all common tangents between multiple circles. Built with mathematical precision and a focus on performance.
 
 ## Features
 
-- **Interactive Canvas:** Draw circles effortlessly on a grid-based canvas (1st click sets the center, mouse movement previews the radius, 2nd click confirms).
-- **Tangent Calculation:** Instantly computes and displays all existing external and internal tangents for all unique pairs of circles.
-- **Analytical Sidebar:** Displays real-time coordinate data ($X, Y$) and radius ($r$) for each circle, along with specific touchpoints for every computed tangent.
-- **Visual Mapping:** All components on the canvas (Circles $K_n$, Tangents $T_n$) are labeled to perfectly match the data in the analytical sidebar.
+- **Interactive Canvas:** Draw circles via click-and-drag (1st click sets center, mouse movement previews radius, 2nd click confirms).
+- **Tangent Calculation:** Instantly computes all external and internal tangents for all unique pairs of circles.
+- **Analytical Sidebar:** Live data display of coordinates (X, Y), radius (r), and exact touchpoints.
+- **Visual Mapping:** Canvas elements (Circles K_n, Tangents T_n) are labeled to match the sidebar data perfectly.
 
 ## Tech Stack & Optimizations
 
-- **React + TypeScript:** Strongly typed components ensuring high code reliability.
-- **Tailwind CSS v4:** Clean, modern, and fully responsive layout without content shifting.
-- **Event-Driven Canvas:** Avoids traditional infinite rendering loops (`requestAnimationFrame`). The canvas redraws *only* when the state changes or during active circle creation, drastically reducing CPU/GPU usage.
-- **Aspect Ratio Compensation:** Handlers automatically calculate the scale ratio between the visual CSS bounds and internal canvas dimensions, ensuring pixel-perfect cursor precision on all screens.
+- **React + TypeScript:** Type-safe components and predictable state management.
+- **Tailwind CSS v4:** Clean layout leveraging native v4 features like fractional aspect ratios (`aspect-4/3`).
+- **Optimized Canvas:** Event-driven rendering using `requestAnimationFrame` instead of infinite loops to save CPU/GPU.
+- **`drawRef` Pattern:** High-performance resize handling without stale closures or redundant event listener re-binding.
+- **High-DPI Support:** Sharp rendering on Retina/4K displays via `window.devicePixelRatio`.
 
+````markdown
 ## Getting Started
 
-1. **Clone the repository and navigate to the folder:**
-    ```bash
-    cd circle-tangents
+Run the project locally in three steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/marek-kulhavy/circle-tangents.git](https://github.com/marek-kulhavy/circle-tangents.git)
+   cd circle-tangents
+   ```
 
 2. **Install dependencies:**
-    ```bash
-    npm install
 
-3. **Clone the repository and navigate to the folder:**
-    ```bash
-    npm run dev
+   ```bash
+   npm install
+   ```
 
-4. **Open http://localhost:5173/ in your browser.**
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
